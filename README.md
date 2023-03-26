@@ -1,1 +1,1 @@
-# Learning French by flashccards React-app
+# Learning French by flashcards React-app
