@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Raleway&display=swap");
+
+.themes__list {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+a {
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+}
+a:hover {
+	border-bottom: 1px solid #dba220;
+}
