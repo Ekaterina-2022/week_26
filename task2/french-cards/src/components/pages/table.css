@@ -1,0 +1,16 @@
+.container {
+	width: 100%;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+	flex-direction: column;
+}
+.table_wrapper {
+	width: 80%;
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+}

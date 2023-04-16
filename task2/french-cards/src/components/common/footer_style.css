@@ -5,26 +5,35 @@
 	scroll-behavior: smooth;
 	text-decoration: none;
 }
-.a:hover {
-	border: none;
+a {
+	text-decoration: none;
+	color: rgb(124, 77, 17);
 }
-.header_style {
+.footer_style {
 	width: 100%;
-	height: 86px;
+	height: 20vh;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	padding: 2% 2% 0 6%;
 }
-i {
-	font-size: 2rem;
+.footer__author {
+	display: flex;
+	align-items: center;
+	font-weight: 700;
 }
-.header__navigation {
-	width: 50%;
+.footer__year {
+	color: rgb(124, 77, 17);
+	padding-top: 30px;
+	padding-left: 20px;
+}
+.footer__navigation {
+	width: 20%;
 	display: flex;
 }
 .nav__bar {
 	display: flex;
+	flex-direction: column;
 }
 .nav__bar li {
 	font-family: "Raleway", sans-serif;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./themes_style.css";
+import styles from "./themes_style.css";
 
 
 class Theme extends React.Component {
@@ -7,7 +7,7 @@ class Theme extends React.Component {
         const {name} = this.props;
         return (
           <>
-    <li className="themes__list_item"><a>{name}</a></li>
+    <li className={styles.themes__list}><a>{name}</a></li>
     </>
     )
 }

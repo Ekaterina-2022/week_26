@@ -1,0 +1,15 @@
+.table__cell {
+	width: 20%;
+}
+.table__cell_active {
+	background-color: rgb(223, 160, 83);
+}
+input {
+	width: 100%;
+	background-color: rgb(250, 235, 215);
+	border: none;
+	text-align: center;
+}
+.table__cell:not(:last-child) {
+	border-right: 1px solid black;
+}
