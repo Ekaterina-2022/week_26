@@ -1,0 +1,39 @@
+.card {
+	display: flex;
+	width: 750px;
+	height: 300px;
+	border: 4px double rgb(255, 239, 62);
+	box-shadow: 0px 5px 9px 7px rgba(132, 155, 227, 0.2);
+}
+.card__word {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 50%;
+	padding: 5px;
+	border-right: 2px double rgba(132, 155, 227, 0.2);
+	text-align: center;
+}
+.card__translation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	text-align: center;
+}
+.card__translation h3 {
+	color: brown;
+}
+.check_btn {
+	width: 200px;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	font-size: 1.3rem;
+	background-color: #ecb540;
+	border: 1px solid rgb(116, 67, 4);
+	border-radius: 20px;
+	padding: 2px;
+}

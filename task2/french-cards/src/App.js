@@ -1,12 +1,13 @@
 import styles from "./App.css";
 import "./components/themes/themes_style.css";
-import themes from "./components/themes/themes.js";
-import Card from "./components/card";
+import themes from "./components/themes/themes_list.js";
+import Card from "./components/card/card";
 import Theme from "./components/themes/themes.jsx";
 import Header from "./components/common/header";
 import Footer from "./components/common/footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Table from "./components/pages/table";
+import words from "./components/pages/words_list";
 
 function App() {
 	return (
@@ -37,6 +38,18 @@ function App() {
 						</ul>
 					</div>
 				</section>
+				<section>
+					{words.map((word) => (
+						<Card
+							key={word.id}
+							word={word.word}
+							transcrip={word.transcription}
+							translation={word.translation}
+							theme={word.theme}
+						/>
+					))}
+				</section>
+
 				<Table></Table>
 				<Footer></Footer>
 				<Routes>
