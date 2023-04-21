@@ -9,7 +9,7 @@ const TableCell = ({ item }) => {
     return (
       <td className={styles.table__cell}>
         <input
-          value={state}
+          defaultValue={state}
           type="text" />
       </td>
     )

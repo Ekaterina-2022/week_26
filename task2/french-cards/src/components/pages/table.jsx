@@ -14,7 +14,7 @@ export default function Table() {
       const newArr = arr.filter((word) => word.id !== id);
       setArr(newArr);
     };
-	console.log('props obj:', {handleDelete});
+	//console.log('props obj:', {handleDelete});
 	
 	return (
 		<div className={styles.container}>
@@ -22,7 +22,7 @@ export default function Table() {
 			<TableHeader></TableHeader>
 			<tbody>
 			{words.map((word) => <TableRow
-			key={word.id} word={word.word} transcription={word.transcription} translation={word.translation} theme={word.theme} handleDelete={handleDelete}/>)}
+			key={word.id} id={word.id} word={word.word} transcription={word.transcription} translation={word.translation} theme={word.theme} setArr={word.setArr} handleDelete={handleDelete}/>)}
 			</tbody>
 			</table>
 		</div>

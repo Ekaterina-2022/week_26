@@ -6,14 +6,15 @@ import TableCell from "./table-cell";
 import ButtonEdit from "../common/button_edit";
 
 
-function TableRow (words, {handleDelete}){
-  //console.log('props obj:', {handleDelete});
+function TableRow (props){
+  //console.log('props obj:', props.handleDelete);
     const {
         word,
         transcription,
         translation,
         theme,
-    } = words;
+        id
+    } = props;
     
     return (
       <tr className={styles.table__row} key={word.id}  >
@@ -21,7 +22,7 @@ function TableRow (words, {handleDelete}){
         <TableCell item={transcription}></TableCell>
         <TableCell item={translation}></TableCell>
         <TableCell item={theme}></TableCell>
-        <td><ButtonDelete onClick={() => handleDelete}>delete</ButtonDelete></td>
+        <td><ButtonDelete onClick={() => {props.handleDelete(id)}}>delete</ButtonDelete></td>
       </tr>
     )
   };
