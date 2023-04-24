@@ -8,6 +8,7 @@ import Footer from "./components/common/footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Table from "./components/pages/table";
 import words from "./components/pages/words_list";
+import CardSlider from "./components/pages/cards-slider";
 
 function App() {
 	return (
@@ -39,15 +40,7 @@ function App() {
 					</div>
 				</section>
 				<section>
-					{words.map((word) => (
-						<Card
-							key={word.id}
-							word={word.word}
-							transcrip={word.transcription}
-							translation={word.translation}
-							theme={word.theme}
-						/>
-					))}
+					<CardSlider />
 				</section>
 
 				<Table></Table>

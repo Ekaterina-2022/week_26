@@ -3,7 +3,7 @@ import styles from "./table-row.css";
 import ButtonDelete from "../common/button_del";
 import ButtonSave from "../common/button_save";
 import TableCell from "./table-cell";
-import ButtonEdit from "../common/button_edit";
+
 
 
 function TableRow (props){

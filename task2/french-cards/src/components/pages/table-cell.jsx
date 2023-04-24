@@ -9,7 +9,8 @@ const TableCell = ({ item }) => {
     return (
       <td className={styles.table__cell}>
         <input
-          defaultValue={state}
+          value={state}
+          onChange={({ target }) => setState(target.value)}
           type="text" />
       </td>
     )

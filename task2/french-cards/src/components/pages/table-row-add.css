@@ -1,0 +1,15 @@
+.table__row_add {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	border: 2px solid rgb(90, 64, 15);
+}
+td {
+	display: flex;
+	justify-content: center;
+	width: 20%;
+}

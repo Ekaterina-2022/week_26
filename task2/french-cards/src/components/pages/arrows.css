@@ -1,0 +1,41 @@
+.arrows {
+	/*color: white;*/
+	display: flex;
+	font-size: 30px;
+	justify-content: space-between;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	position: absolute;
+	top: 50%;
+	width: 100px;
+	z-index: 10;
+}
+
+.arrows .arrow {
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.arrows .arrow:hover {
+	cursor: pointer;
+}
+
+.arrows .arrow .left {
+	/*background-image: url(./arrow.png);*/
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 5px;
+	transform: rotate(180deg);
+}
+
+.arrows .arrow .right {
+	background-image: url("../assets/arrow.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-right: 5px;
+}

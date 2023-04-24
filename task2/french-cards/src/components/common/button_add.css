@@ -1,0 +1,7 @@
+.btn_add {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	background-color: rgb(177, 186, 8);
+	color: rgb(227, 235, 241);
+}
