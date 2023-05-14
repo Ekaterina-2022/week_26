@@ -7,7 +7,7 @@ class Theme extends React.Component {
         const {name} = this.props;
         return (
           <>
-    <li className={styles.themes__list}><a>{name}</a></li>
+    <li className={styles.themes__list_item}><a>{name}</a></li>
     </>
     )
 }

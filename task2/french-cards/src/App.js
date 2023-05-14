@@ -5,51 +5,40 @@ import Card from "./components/card/card";
 import Theme from "./components/themes/themes.jsx";
 import Header from "./components/common/header";
 import Footer from "./components/common/footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Table from "./components/pages/table";
+import { Routes, Route, Link } from "react-router-dom";
+import Table from "./components/pages/table/table";
 import words from "./components/pages/words_list";
-import CardSlider from "./components/pages/cards-slider";
+import CardSlider from "./components/pages/slider/cards-slider";
+import PageNotFound from "./components/common/pageNotFound";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<div className={styles.app}>
-				<Header></Header>
+		<div className={styles.app}>
+			<Header />
 
-				<h1>Decks in French</h1>
-				<section className={styles.main__welcome}>
-					<ul className={styles.choose__sections}>
-						<li className={styles.choose__sections_item}>
-							<a>Learn words by Themes</a>
-						</li>
-						<li className={styles.choose__sections_item}>
-							<a>See all of the words</a>
-						</li>
-						<li className={styles.choose__sections_item}>
-							<a>Vocabulary/ Le dictionnaire</a>
-						</li>
-					</ul>
-				</section>
-				<section className={styles.section__themes}>
-					<div className={styles.cards__theme}>
-						<ul className={styles.themes__list}>
-							{themes.map((e) => (
-								<Theme key={e.id} name={e.name} />
-							))}
-						</ul>
-					</div>
-				</section>
-				<section>
-					<CardSlider />
-				</section>
+			<h1>Decks in French</h1>
+			<section className={styles.main__welcome}>
+				<ul className={styles.choose__sections}>
+					<li className={styles.choose__sections_item}>
+						<Link to="/game">Learn words by Themes</Link>
+					</li>
+					<li className={styles.choose__sections_item}>
+						<Link to="/table">See all of the words</Link>
+					</li>
+					<li className={styles.choose__sections_item}>
+						<a>Vocabulary/ Le dictionnaire</a>
+					</li>
+				</ul>
+			</section>
 
-				<Table></Table>
-				<Footer></Footer>
-				<Routes>
-					<Route exact path="/table" component={<Table></Table>} />
-				</Routes>
-			</div>
-		</BrowserRouter>
+			<Routes>
+				<Route exact path="/home" />
+				<Route exact path="/game" element={<CardSlider {...words} />} />
+				<Route exact path="/table" element={<Table />} />
+				<Route path="*" element={<PageNotFound />} />
+			</Routes>
+			<Footer />
+		</div>
 	);
 }
 

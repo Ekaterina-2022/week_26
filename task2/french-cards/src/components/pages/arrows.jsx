@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
-import { SliderContext } from "./cards-slider";
+import React from "react";
+import { SliderContext } from "./slider/cards-slider";
 
 import styles from "./arrows.css";
 
-export default function Arrows() {
-  const { changeSlide } = useContext(SliderContext);
-
+export default function Arrows({nextSlide, prevSlide}) {
+  
   return (
     <div className={styles.arrows}>
-      <div className={styles.arrows + " " + styles.arrow + " " + styles.left} onClick={() => changeSlide(-1)} />
-      <div className={styles.arrows + " " + styles.arrow + " " + styles.right} onClick={() => changeSlide(1)} />
+      <div onClick={() => nextSlide()} className={styles.btn_back}><span>next</span></div>
+      <div onClick={() => prevSlide()} className={styles.btn_back}><span>back</span></div>
     </div>
   );
 }

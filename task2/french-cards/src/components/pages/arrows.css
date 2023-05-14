@@ -1,41 +1,65 @@
 .arrows {
-	/*color: white;*/
 	display: flex;
-	font-size: 30px;
+	height: 20%;
 	justify-content: space-between;
-	height: -webkit-fit-content;
-	height: -moz-fit-content;
-	height: fit-content;
-	position: absolute;
-	top: 50%;
-	width: 100px;
-	z-index: 10;
+	padding-top: 4%;
 }
-
-.arrows .arrow {
-	height: -webkit-fit-content;
-	height: -moz-fit-content;
-	height: fit-content;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-}
-
-.arrows .arrow:hover {
+.btn_back {
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	width: 200px;
 	cursor: pointer;
+	color: rgba(166, 87, 7);
+	transition: all 0.3s;
+	position: relative;
+	text-transform: uppercase;
 }
 
-.arrows .arrow .left {
-	/*background-image: url(./arrow.png);*/
-	background-repeat: no-repeat;
-	background-size: contain;
-	margin-left: 5px;
-	transform: rotate(180deg);
+.btn_next {
+	display: block;
+	width: 100px;
 }
-
-.arrows .arrow .right {
-	background-image: url("../assets/arrow.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	margin-right: 5px;
+.btn_back span {
+	transition: all 0.3s;
+}
+.btn_back::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(166, 87, 7, 0.5);
+	border-bottom-color: rgba(166, 87, 7, 0.5);
+	transform: scale(0.1, 1);
+}
+.btn_back:hover span {
+	letter-spacing: 2px;
+}
+.btn_back:hover::before {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+.btn_back::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	background-color: rgba(255, 239, 62, 0.5);
+}
+.btn_back:hover::after {
+	opacity: 0;
+	transform: scale(0.1, 1);
 }

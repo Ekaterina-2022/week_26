@@ -16,3 +16,6 @@ th {
 th:not(:last-child) {
 	border-right: 1px solid rgb(100, 66, 3);
 }
+th:nth-child(odd):not(:last-child) {
+	width: 35%;
+}

@@ -1,10 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK&family=Raleway&display=swap");
 
+.section__themes {
+	width: 100%;
+}
 .themes__list {
 	display: flex;
 	flex-direction: column;
-	width: 500px;
+	width: 100%;
 	line-height: 80px;
+	flex-wrap: wrap;
+	height: 60vh;
+}
+.cards__theme {
+	display: flex;
+	width: 80%;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	flex-wrap: wrap;
+	font-size: 1.5rem;
+	line-height: 3.2rem;
+	margin: 0 auto;
 }
 a {
 	font-family: "Raleway", sans-serif;

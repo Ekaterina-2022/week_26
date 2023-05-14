@@ -6,7 +6,7 @@ export default function TableHeader() {
 		<thead>
 		<tr className={styles.container}>
 			<th>word</th>
-			<th>transcription</th>
+			<th>transcrip</th>
             <th>translation</th>
             <th>theme</th>
 			<th>options</th>
