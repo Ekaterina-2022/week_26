@@ -1,4 +1,5 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useRef,
+  forwardRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./cards-slider.css";
 import s from "../../themes/themes_style.css";
@@ -17,7 +18,12 @@ export default function CardSlider (props) {
     const [slide, setSlide] = useState(0);
     const [animation, setAnimation] = useState(true);
     const [index, setIndex] = useState(0);
+    const [itemsLearnt, setItemsLearnt] = useState(0);
 const word = props[index];
+
+const ref = useRef();
+ 
+useEffect(() => ref.current.focus());   // in componentDidMount()
 
 const nextSlide = () => {
   setIndex(index === arr.length - 1 ? 0 : index + 1)
@@ -26,31 +32,11 @@ const nextSlide = () => {
 const prevSlide = () => {
   setIndex(index === 0 ? arr.length - 1 : index - 1)
 }
+
+const addLearntWords = () => {
+  setItemsLearnt(itemsLearnt + 1)
+}
     
-      /*const goToSlide = (number) => {
-        setAnimation(false);
-        setSlide(number % arr.length);
-    
-        const timeout = setTimeout(() => {
-          setAnimation(true);
-        }, 0);
-    
-        return () => {
-          clearTimeout(timeout)
-        }
-      };*/
-    
-      /*useEffect(() => {
-        if (!props.autoPlay) return;
-    
-        const interval = setInterval(() => {
-          changeSlide(1);
-        }, props.autoPlayTime);
-    
-        return () => {
-          clearInterval(interval);
-        };
-      }, [arr.length, slide]);*/
 
 
 
@@ -68,18 +54,13 @@ return (
   <div className="slider">
 
       <SliderContext.Provider
-        value={{
-          /*goToSlide,*/
-          /*changeSlide,
-          slidesCount: items.length,
-          slideNumber: slide,*/
-        }}
       >
         {   
-            <Card data={items[slide]} animation={animation} {...word} key={index}/>
+            <Card data={items[slide]} animation={animation} addLearntWords={addLearntWords} ref={ref} key={index} {...word}/>
          
         }
         <Arrows nextSlide={nextSlide} prevSlide={prevSlide}/>
+        <div>Already learnt {itemsLearnt} </div>
       </SliderContext.Provider>
     </div></>
 
