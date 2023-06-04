@@ -16,6 +16,7 @@
 	justify-content: space-between;
 	padding: 2% 2% 0 6%;
 	position: fixed;
+	background-color: rgb(250, 235, 215);
 }
 i {
 	font-size: 2rem;
