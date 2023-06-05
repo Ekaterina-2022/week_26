@@ -11,6 +11,7 @@ export default function TableRowAdd(props) {
 	const [transcription, setTranscription] = useState("");
 	const [translation, setTranslation] = useState("");
 	const [theme, setTheme] = useState("");
+	const [isReadOnlyAddedWord, setAddedWord] = useState(false);
 
 	const handleAddWord = () => {
 		const newWord = {
@@ -20,22 +21,30 @@ export default function TableRowAdd(props) {
 			translation: translation,
 			theme: theme,
 		};
-
-		/*const newArrWords = [
-		  ...arr, 
-		  { id: newWordId, word: "", transcription: "", translation: "", theme: ""},
-		];*/
-
 		setArr([...arr, newWord]);
 		setEnglish("");
+		console.log(newWord);
+		console.log(english);
 	};
 
 	return (
 		<tr className={styles.table__row_add}>
-			<TableCell setState={setEnglish}>write</TableCell>
-			<TableCell setState={setTranscription}></TableCell>
-			<TableCell setState={setTranslation}></TableCell>
-			<TableCell setState={setTheme}></TableCell>
+			<TableCell
+				setState={setEnglish}
+				isAddedWord={isReadOnlyAddedWord}
+			></TableCell>
+			<TableCell
+				setState={setTranscription}
+				isAddedWord={isReadOnlyAddedWord}
+			></TableCell>
+			<TableCell
+				setState={setTranslation}
+				isAddedWord={isReadOnlyAddedWord}
+			></TableCell>
+			<TableCell
+				setState={setTheme}
+				isAddedWord={isReadOnlyAddedWord}
+			></TableCell>
 			<td>
 				<ButtonAdd
 					onClick={() => {

@@ -38,6 +38,7 @@ export default function Table() {
 		});
 		setArr(newItem);
 		setEditIndex(null);
+		console.log(newItem);
 	};
 
 	return (
@@ -56,6 +57,7 @@ export default function Table() {
 							handleDelete={handleDelete}
 							handleEditItem={handleEditItem}
 							handleSaveEdited={handleSaveEdited}
+							//editedWord={editedWord}
 						/>
 					))}
 					<TableRowAdd setArr={setArr} arr={arr}></TableRowAdd>
